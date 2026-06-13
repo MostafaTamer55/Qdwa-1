@@ -9,7 +9,7 @@
     <style>
         :root {
             --primary-color: #212A3E; /* الكحلي من اللوجو */
-            --accent-color: #C4A475;  /* الذهبي/البيج من اللوجo */
+            --accent-color: #C4A475;  /* الذهبي/البيج من اللوجو */
             --bg-color: #FDFBF7;      /* الخلفية العاجية */
             --text-color: #333333;
         }
@@ -41,7 +41,7 @@
         }
 
         .logo img {
-            height: 60px; /* هنا يتم ربط ملف logo_2.png */
+            height: 60px; /* مربوط بملف logo_2.png */
         }
 
         nav a {
@@ -57,17 +57,21 @@
         }
 
         .btn-header {
-            background-color: var(--primary-color);
+            background-color: #25D366; /* لون الواتساب الأخضر لتمييز زر الاشتراك */
             color: #fff;
             padding: 10px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-header:hover {
-            background-color: var(--accent-color);
+            background-color: #20ba5a;
+            transform: scale(1.05);
         }
 
         /* القسم الرئيسي */
@@ -78,7 +82,6 @@
             position: relative;
         }
 
-        /* لمسة زخرفية إسلامية خفيفة في الخلفية */
         .hero::before {
             content: "✦ ✦ ✦";
             display: block;
@@ -190,6 +193,44 @@
             margin-bottom: 10px;
         }
 
+        /* قسم قنوات الاتصال */
+        .contact-section {
+            padding: 60px 8%;
+            text-align: center;
+            background-color: #fff;
+            border-top: 1px solid #f0e6da;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .contact-btn.whatsapp { background-color: #25D366; }
+        .contact-btn.telegram-chat { background-color: #0088cc; }
+        .contact-btn.telegram-channel { background-color: #229ED9; }
+        .contact-btn.facebook { background-color: #1877F2; }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
         /* الفوتر */
         footer {
             background-color: #1a2232;
@@ -212,6 +253,8 @@
             header { flex-direction: column; gap: 15px; text-align: center; }
             nav { margin-bottom: 15px; }
             .hero h1 { font-size: 2rem; }
+            .contact-grid { flex-direction: column; align-items: center; }
+            .contact-btn { width: 100%; max-width: 300px; justify-content: center; }
         }
     </style>
 </head>
@@ -220,22 +263,24 @@
     <!-- الهيدر -->
     <header>
         <div class="logo">
-            <!-- استبدل logo_2.png بمسار الصورة الحقيقي لديك -->
             <img src="logo_2.png" alt="شعار دورة قدوة">
         </div>
         <nav>
             <a href="#">الرئيسية</a>
             <a href="#features">مميزاتنا</a>
             <a href="#surprises">المفاجآت</a>
+            <a href="#contact">تواصل معنا</a>
         </nav>
-        <a href="#" class="btn-header">سجّل طفلك الآن</a>
+        <a href="https://wa.me/201550319243" target="_blank" class="btn-header">
+            💬 اشترك عبر واتساب
+        </a>
     </header>
 
     <!-- القسم الرئيسي -->
     <section class="hero">
         <h1>رحلة بناء الطفل تبدأ من الأساسات</h1>
         <p>نرافق طفلك (من سن 9 إلى 14 سنة) في دورة تعليمية مكثفة تبني عقيدته، وتُعمق صلاته، وتفتح قلبه لفهم القرآن الكريم وتدبره.</p>
-        <a href="#" class="btn-header" style="background-color: var(--accent-color); padding: 15px 40px; font-size: 1.1rem;">انضم إلينا مجاناً</a>
+        <a href="https://wa.me/201550319243" target="_blank" class="btn-header" style="background-color: var(--accent-color); padding: 15px 40px; font-size: 1.1rem;">انضم إلينا مجاناً الآن</a>
     </section>
 
     <!-- قسم المميزات -->
@@ -267,7 +312,7 @@
 
     <!-- قسم المفاجآت -->
     <section class="surprises" id="surprises">
-        <h2 class="section-title">مفاجآت وهدايا الدورة</h2>
+        <h2 class="section-title">مميزات ومفاجآت الدورة</h2>
         <div class="surprise-grid">
             <div class="surprise-box">
                 <h4>دورة مجانية 100%</h4>
@@ -281,6 +326,34 @@
                 <h4>هدية لأولياء الأمور</h4>
                 <p>لأنكم شركاء النجاح، جهزنا لكم مفاجأة وهدية قيمة جداً في نهاية الرحلة.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل المباشر الجديد -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">قنوات التواصل والإشتراك السريع</h2>
+        <p>يسعدنا تواصلكم للإجابة على استفساراتكم أو لتسجيل أبنائكم مباشرة</p>
+        
+        <div class="contact-grid">
+            <!-- رابط الواتساب مباشر -->
+            <a href="https://wa.me/201550319243" target="_blank" class="contact-btn whatsapp">
+                🟢 واتساب للإشتراك والتواصل
+            </a>
+            
+            <!-- رابط شات تليجرام المباشر -->
+            <a href="https://t.me/kodoa2026" target="_blank" class="contact-btn telegram-chat">
+                🔵 تليجرام: للتواصل المباشر
+            </a>
+
+            <!-- رابط قناة تليجرام الرسمية -->
+            <a href="https://t.me/kodoa1450" target="_blank" class="contact-btn telegram-channel">
+                📢 الحساب الرسمي على تليجرام
+            </a>
+
+            <!-- رابط الفيسبوك -->
+            <a href="https://www.facebook.com/profile.php?id=61590333074226" target="_blank" class="contact-btn facebook">
+                🔵 الصفحة الرسمية على فيسبوك
+            </a>
         </div>
     </section>
 
